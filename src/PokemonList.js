@@ -8,7 +8,7 @@ export default function PokemonList({ pokemon }) {
 	return (
 		<>
 			{number.map((num) => (
-				<div>{pokemon[num].name}</div>
+				<div key={num}>{pokemon[num].name}</div>
 			))}
 		</>
 	);
