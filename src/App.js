@@ -3,10 +3,10 @@ import PokemonList from "./PokemonList";
 import axios from "axios";
 
 function App() {
-	const [pokemon, setPokemon] = useState(["balbasour", "charmander"]);
+	const [pokemon, setPokemon] = useState([]);
 	useEffect(() => {
 		axios.get("https://pokeapi.co/api/v2/pokemon/?limit=151").then((res) => {
-			setPokemon(res.data.results.map((p) => p));
+			setPokemon(res.data.results);
 		});
 	}, []);
 

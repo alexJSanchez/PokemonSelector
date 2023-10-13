@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import "./App.css";
+import { v4 as uuidv4 } from "uuid";
+import randomNumbers from "./numbers";
 
 export default function PokemonList({ pokemon }) {
+	const [number, setNumber] = useState(randomNumbers);
 	return (
-		<div>
-			{pokemon.map((p) => (
-				<div key={p.name}>{p.name}</div>
+		<>
+			{number.map((num) => (
+				<div>{pokemon[num].name}</div>
 			))}
-		</div>
+		</>
 	);
 }
