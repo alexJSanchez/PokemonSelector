@@ -12,7 +12,7 @@ function App() {
 			setPokemon(res.data.results);
 		});
 	}, []);
-	if (loading) return "...loading";
+	if (loading) return <div className="App-header">{"...loading"}</div>;
 	return <PokemonList pokemon={pokemon} />;
 }
 
