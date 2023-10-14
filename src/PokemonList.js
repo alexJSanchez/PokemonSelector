@@ -8,11 +8,21 @@ export default function PokemonList({ pokemon }) {
 	const [number, setNumber] = useState(randomNumbers);
 	const [selectedPoke, setSelectedPoke] = useState("");
 	const [pokeDestination, setPokeDestination] = useState("");
+	const [pokeStats, setPokeStats] = useState([]);
+
 	useEffect(() => {
 		axios
 			.get(`https://pokeapi.co/api/v2/pokemon/${selectedPoke}`)
 			.then((res) => {
-				console.log(res);
+				console.log(res.data);
+				setPokeStats([
+					{
+						id: res.data.id,
+						name: res.data.name,
+						weight: res.data.weight,
+						image: res.data.sprites,
+					},
+				]);
 			});
 	}, [pokeDestination]);
 	return (
@@ -20,6 +30,7 @@ export default function PokemonList({ pokemon }) {
 			{number.map((num) => (
 				<div key={num}>
 					<p>{pokemon[num].name}</p>
+					{pokeStats ? "" : <div></div>}
 					<button
 						onClick={() => (
 							setPokeDestination(pokemon[num].url),

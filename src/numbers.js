@@ -9,6 +9,5 @@ function getRandomNumbers(count, min, max) {
 }
 
 const randomNumbers = getRandomNumbers(6, 1, 151);
-console.log(randomNumbers);
 
 export default randomNumbers;
