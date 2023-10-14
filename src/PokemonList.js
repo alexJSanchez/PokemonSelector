@@ -15,14 +15,12 @@ export default function PokemonList({ pokemon }) {
 			.get(`https://pokeapi.co/api/v2/pokemon/${selectedPoke}`)
 			.then((res) => {
 				console.log(res.data);
-				setPokeStats([
-					{
-						id: res.data.id,
-						name: res.data.name,
-						weight: res.data.weight,
-						image: res.data.sprites,
-					},
-				]);
+				setPokeStats({
+					id: res.data.id,
+					name: res.data.name,
+					weight: res.data.weight,
+					image: res.data.sprites,
+				});
 			});
 	}, [pokeDestination]);
 	return (
@@ -30,7 +28,17 @@ export default function PokemonList({ pokemon }) {
 			{number.map((num) => (
 				<div key={num}>
 					<p>{pokemon[num].name}</p>
-					{pokeStats ? "" : <div></div>}
+					{pokeStats ? (
+						<div>
+							<ul>
+								<li># : {pokeStats.id}</li>
+								<li>name: {pokeStats.name}</li>
+								<li>weight : {pokeStats.weight}</li>
+							</ul>
+						</div>
+					) : (
+						""
+					)}
 					<button
 						onClick={() => (
 							setPokeDestination(pokemon[num].url),
