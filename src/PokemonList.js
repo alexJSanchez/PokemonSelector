@@ -22,23 +22,24 @@ export default function PokemonList({ pokemon }) {
 					image: res.data.sprites,
 				});
 			});
-	}, [pokeDestination]);
+	}, [selectedPoke]);
 	return (
 		<div className="App-header">
+			{pokeStats.id != undefined ? (
+				<div>
+					<ul>
+						<li># : {pokeStats.id}</li>
+						<li>name: {pokeStats.name}</li>
+						<li>weight : {pokeStats.weight}</li>
+					</ul>
+				</div>
+			) : (
+				""
+			)}
 			{number.map((num) => (
 				<div key={num}>
 					<p>{pokemon[num].name}</p>
-					{pokeStats ? (
-						<div>
-							<ul>
-								<li># : {pokeStats.id}</li>
-								<li>name: {pokeStats.name}</li>
-								<li>weight : {pokeStats.weight}</li>
-							</ul>
-						</div>
-					) : (
-						""
-					)}
+
 					<button
 						onClick={() => (
 							setPokeDestination(pokemon[num].url),
