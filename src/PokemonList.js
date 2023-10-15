@@ -28,6 +28,9 @@ export default function PokemonList({ pokemon }) {
 			{pokeStats.id != undefined ? (
 				<div>
 					<ul>
+						<li>
+							<img src={pokeStats.image.front_default}></img>
+						</li>
 						<li># : {pokeStats.id}</li>
 						<li>name: {pokeStats.name}</li>
 						<li>weight : {pokeStats.weight}</li>
