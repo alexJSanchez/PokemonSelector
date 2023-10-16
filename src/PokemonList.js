@@ -28,21 +28,23 @@ export default function PokemonList({ pokemon }) {
 		<>
 			<div className="App-header">
 				<PokeStats stats={pokeStats} />
-				{number.map((num) => (
-					<div key={num}>
-						<p>{pokemon[num].name}</p>
+				<div className="result_box">
+					{number.map((num) => (
+						<div key={num}>
+							<p>{pokemon[num].name}</p>
 
-						<button
-							onClick={() => (
-								setPokeDestination(pokemon[num].url),
-								setSelectedPoke(pokemon[num].name)
-							)}
-							key={pokemon[num].name}
-						>
-							{pokemon[num].name} Stats
-						</button>
-					</div>
-				))}
+							<button
+								onClick={() => (
+									setPokeDestination(pokemon[num].url),
+									setSelectedPoke(pokemon[num].name)
+								)}
+								key={pokemon[num].name}
+							>
+								{pokemon[num].name} Stats
+							</button>
+						</div>
+					))}
+				</div>
 			</div>
 		</>
 	);

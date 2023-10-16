@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import "./App.css";
 export default function PokeStats({ stats }) {
 	const [pokemonStats] = useState(stats);
 
@@ -7,10 +7,13 @@ export default function PokeStats({ stats }) {
 		<>
 			{console.log(stats)}
 			{stats.id !== undefined ? (
-				<div className="Pokemon_Card">
+				<div className="pokemon_card">
 					<ul>
-						<li className="Pokemon_Card_">
-							<img src={stats.image.front_default}></img>
+						<li>
+							<img
+								className="pokemon_card_img"
+								src={stats.image.front_default}
+							></img>
 						</li>
 						<li># : {stats.id}</li>
 						<li>name: {stats.name}</li>

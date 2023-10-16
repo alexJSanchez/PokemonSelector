@@ -1,9 +1,23 @@
 .App-header {
 	background-color: #282c34;
 	min-height: 100vh;
-	display: flex;
+	display: grid;
+	grid-template-rows: 2;
 	align-items: center;
 	justify-content: center;
-	font-size: calc(10px);
+	font-size: calc(25px);
 	color: white;
+}
+.result_box {
+	display: flex;
+}
+.pokemon_card {
+	border: 5px solid;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.pokemon_card_img {
+	width: 50%;
 }
