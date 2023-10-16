@@ -50,7 +50,7 @@ export default function PokemonList({ pokemon }) {
 						)}
 						key={pokemon[num].name}
 					>
-						{pokemon[num].url}
+						{pokemon[num].name} Stats
 					</button>
 				</div>
 			))}
