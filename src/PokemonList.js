@@ -3,6 +3,7 @@ import "./App.css";
 import { v4 as uuidv4 } from "uuid";
 import randomNumbers from "./numbers";
 import axios from "axios";
+import PokeStats from "./PokeStats";
 
 export default function PokemonList({ pokemon }) {
 	const [number, setNumber] = useState(randomNumbers);
@@ -24,36 +25,25 @@ export default function PokemonList({ pokemon }) {
 			});
 	}, [selectedPoke]);
 	return (
-		<div className="App-header">
-			{pokeStats.id !== undefined ? (
-				<div className="Pokemon_Card">
-					<ul>
-						<li className="Pokemon_Card_">
-							<img src={pokeStats.image.front_default}></img>
-						</li>
-						<li># : {pokeStats.id}</li>
-						<li>name: {pokeStats.name}</li>
-						<li>weight : {pokeStats.weight}lb</li>
-					</ul>
-				</div>
-			) : (
-				""
-			)}
-			{number.map((num) => (
-				<div key={num}>
-					<p>{pokemon[num].name}</p>
+		<>
+			<div className="App-header">
+				<PokeStats stats={pokeStats} />
+				{number.map((num) => (
+					<div key={num}>
+						<p>{pokemon[num].name}</p>
 
-					<button
-						onClick={() => (
-							setPokeDestination(pokemon[num].url),
-							setSelectedPoke(pokemon[num].name)
-						)}
-						key={pokemon[num].name}
-					>
-						{pokemon[num].name} Stats
-					</button>
-				</div>
-			))}
-		</div>
+						<button
+							onClick={() => (
+								setPokeDestination(pokemon[num].url),
+								setSelectedPoke(pokemon[num].name)
+							)}
+							key={pokemon[num].name}
+						>
+							{pokemon[num].name} Stats
+						</button>
+					</div>
+				))}
+			</div>
+		</>
 	);
 }
