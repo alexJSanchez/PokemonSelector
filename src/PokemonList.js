@@ -25,15 +25,15 @@ export default function PokemonList({ pokemon }) {
 	}, [selectedPoke]);
 	return (
 		<div className="App-header">
-			{pokeStats.id != undefined ? (
-				<div>
+			{pokeStats.id !== undefined ? (
+				<div className="Pokemon_Card">
 					<ul>
-						<li>
+						<li className="Pokemon_Card_">
 							<img src={pokeStats.image.front_default}></img>
 						</li>
 						<li># : {pokeStats.id}</li>
 						<li>name: {pokeStats.name}</li>
-						<li>weight : {pokeStats.weight}</li>
+						<li>weight : {pokeStats.weight}lb</li>
 					</ul>
 				</div>
 			) : (
