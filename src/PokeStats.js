@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import bug from "./images/bug.png";
+
+console.log(bug);
 export default function PokeStats({ stats }) {
 	return (
 		<>
@@ -20,7 +23,7 @@ export default function PokeStats({ stats }) {
 						{stats.type.map((item) => {
 							return (
 								<>
-									<img src={item.type.url}></img>
+									<img src={bug}></img>
 									<p>{item.type.name}</p>
 								</>
 							);
