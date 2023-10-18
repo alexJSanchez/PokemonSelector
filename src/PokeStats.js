@@ -15,7 +15,6 @@ export default function PokeStats({ stats }) {
 					</div>
 					<div>
 						<img
-							height="100%"
 							className="pokemon_card_img"
 							src={stats.image.front_default}
 						></img>
