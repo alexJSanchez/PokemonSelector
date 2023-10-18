@@ -2,7 +2,11 @@
 *::before,
 ::after {
 	box-sizing: border-box;
-	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	font-family: "pokemon", "Arial Narrow", Arial, sans-serif;
+}
+@font-face {
+	font-family: "pokemon";
+	src: url("../src/font/Pokemon\ Classic.ttf") format("truetype");
 }
 .App-header {
 	background-color: #282c34;
@@ -12,13 +16,13 @@
 	justify-content: center;
 	width: 100vw;
 	height: 100vh;
-	font-size: calc(25px);
 	color: white;
 }
 .result_box {
 	display: flex;
 	justify-content: center;
 	text-align: center;
+	font-family: pokemon;
 }
 .result_box_card {
 	margin: 2px;
@@ -27,11 +31,11 @@
 	border: 5px solid;
 	text-align: center;
 }
+.pokemon_card_img {
+}
 .pokemon_card_type {
 	display: flex;
 	justify-content: center;
 }
-
-.pokemon_card_img {
-	width: 50%;
+.pokemon_card_type_image {
 }

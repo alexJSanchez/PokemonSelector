@@ -33,7 +33,6 @@ export default function PokemonList({ pokemon }) {
 					{number.map((num) => (
 						<div className="result_box_card" key={num}>
 							<p>{pokemon[num].name}</p>
-
 							<button
 								onClick={() => (
 									setPokeDestination(pokemon[num].url),

@@ -9,22 +9,24 @@ export default function PokeStats({ stats }) {
 			{console.log(stats)}
 			{stats.id !== undefined ? (
 				<div className="pokemon_card">
-					<div>
-						<img
-							className="pokemon_card_img"
-							src={stats.image.front_default}
-						></img>
-					</div>
-
 					<p># : {stats.id}</p>
 					<p>Name: {stats.name}</p>
 					<div className="pokemon_card_type">
-						type :
+						<div>
+							<img
+								className="pokemon_card_img"
+								src={stats.image.front_default}
+							></img>
+						</div>
 						{stats.type.map((item) => {
 							return (
 								<>
-									{<img src={typeImage(item.type.name)}></img>}
-									<p>{item.type.name}</p>
+									{
+										<img
+											className="pokemon_card_type_image"
+											src={typeImage(item.type.name)}
+										></img>
+									}
 								</>
 							);
 						})}
