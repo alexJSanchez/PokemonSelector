@@ -32,16 +32,16 @@ export default function PokemonList({ pokemon }) {
 				<div className="result_box">
 					{number.map((num) => (
 						<div className="result_box_card" key={num}>
-							<p>{pokemon[num].name}</p>
-							<button
+							<p
 								onClick={() => (
 									setPokeDestination(pokemon[num].url),
 									setSelectedPoke(pokemon[num].name)
 								)}
 								key={pokemon[num].name}
 							>
-								{pokemon[num].name} Stats
-							</button>
+								{pokemon[num].name.charAt(0).toUpperCase() +
+									pokemon[num].name.slice(1)}
+							</p>
 						</div>
 					))}
 				</div>

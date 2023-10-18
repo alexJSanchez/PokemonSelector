@@ -25,17 +25,16 @@
 	font-family: pokemon;
 }
 .result_box_card {
-	margin: 2px;
+	margin: 10px;
 }
 .pokemon_card {
-	border: 5px solid;
-	text-align: center;
-}
-.pokemon_card_img {
-}
-.pokemon_card_type {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: 5px solid;
+}
+.pokemon_card_type {
 }
 .pokemon_card_type_image {
 }
