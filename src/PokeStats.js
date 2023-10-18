@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import typeImage from "./typeimage";
 
-console.log(typeImage("bug"));
 export default function PokeStats({ stats }) {
 	return (
 		<>
-			{console.log(stats)}
 			{stats.id !== undefined ? (
 				<div className="pokemon_card">
 					<div className="pokemon_card_top">

@@ -15,7 +15,6 @@ export default function PokemonList({ pokemon }) {
 		axios
 			.get(`https://pokeapi.co/api/v2/pokemon/${selectedPoke}`)
 			.then((res) => {
-				console.log(res.data);
 				setPokeStats({
 					id: res.data.id,
 					name: res.data.name,
