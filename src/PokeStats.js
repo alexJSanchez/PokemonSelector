@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import bug from "./images/bug.png";
+import typeImage from "./typeimage";
 
-console.log(bug);
+console.log(typeImage("bug"));
 export default function PokeStats({ stats }) {
 	return (
 		<>
@@ -23,7 +23,7 @@ export default function PokeStats({ stats }) {
 						{stats.type.map((item) => {
 							return (
 								<>
-									<img src={bug}></img>
+									{<img src={typeImage(item.type.name)}></img>}
 									<p>{item.type.name}</p>
 								</>
 							);
