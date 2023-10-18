@@ -19,6 +19,7 @@ export default function PokemonList({ pokemon }) {
 				setPokeStats({
 					id: res.data.id,
 					name: res.data.name,
+					type: res.data.types,
 					weight: res.data.weight,
 					image: res.data.sprites,
 				});
@@ -30,7 +31,7 @@ export default function PokemonList({ pokemon }) {
 				<PokeStats stats={pokeStats} />
 				<div className="result_box">
 					{number.map((num) => (
-						<div key={num}>
+						<div className="result_box_card" key={num}>
 							<p>{pokemon[num].name}</p>
 
 							<button

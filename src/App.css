@@ -20,10 +20,16 @@
 	justify-content: center;
 	text-align: center;
 }
+.result_box_card {
+	margin: 2px;
+}
 .pokemon_card {
 	border: 5px solid;
-
 	text-align: center;
+}
+.pokemon_card_type {
+	display: flex;
+	justify-content: center;
 }
 
 .pokemon_card_img {
