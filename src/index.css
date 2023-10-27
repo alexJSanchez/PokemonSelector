@@ -44,6 +44,9 @@ body {
   display: flex;
   gap: 5px;
 }
+.pokemon_card_type_image {
+  width: 5rem;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
