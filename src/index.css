@@ -25,6 +25,7 @@ body {
 .result_box {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 0.125rem;
 }
 @media screen and (max-width: 375px) {
 }
