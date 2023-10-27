@@ -18,44 +18,44 @@ import steel from "./images/steel.png";
 import water from "./images/water.png";
 
 function typeImage(type) {
-	switch (type) {
-		case "bug":
-			return bug;
-		case "dark":
-			return dark;
-		case "dragon":
-			return dragon;
-		case "electric":
-			return electric;
-		case "fairy":
-			return fairy;
-		case "fighting":
-			return fighting;
-		case "fire":
-			return fire;
-		case "flying":
-			return flying;
-		case "ghost":
-			return ghost;
-		case "grass":
-			return grass;
-		case "ground":
-			return ground;
-		case "ice":
-			return ice;
-		case "normal":
-			return normal;
-		case "poison":
-			return poison;
-		case "psychic":
-			return psychic;
-		case "rock":
-			return rock;
-		case "steel":
-			return steel;
-		case "water":
-			return water;
-		default:
-	}
+  switch (type) {
+    case "bug":
+      return bug;
+    case "dark":
+      return dark;
+    case "dragon":
+      return dragon;
+    case "electric":
+      return electric;
+    case "fairy":
+      return fairy;
+    case "fighting":
+      return fighting;
+    case "fire":
+      return fire;
+    case "flying":
+      return flying;
+    case "ghost":
+      return ghost;
+    case "grass":
+      return grass;
+    case "ground":
+      return ground;
+    case "ice":
+      return ice;
+    case "normal":
+      return normal;
+    case "poison":
+      return poison;
+    case "psychic":
+      return psychic;
+    case "rock":
+      return rock;
+    case "steel":
+      return steel;
+    case "water":
+      return water;
+    default:
+  }
 }
 export default typeImage;
