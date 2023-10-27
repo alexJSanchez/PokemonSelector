@@ -1,6 +1,6 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: auto;
 }
 body {
   margin: 0;
@@ -15,11 +15,23 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 .result_box {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+}
+.pokemon_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pokemon_card_top {
+  display: flex;
+  gap: 5px;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
