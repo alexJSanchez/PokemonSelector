@@ -25,8 +25,9 @@ body {
 .result_box {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.625rem;
   margin: 0;
+}
+@media screen and (max-width: 375px) {
 }
 .result_box_card {
   text-align: center;
@@ -34,10 +35,10 @@ body {
   background-color: #ff3547;
   border: 0.125rem solid #000;
   border-radius: 3.125rem;
-  width: 12.5rem;
+  width: 12rem;
   height: 3.75rem;
   position: relative;
-  overflow: hidden;
+  overflow: none;
 }
 .result_box_card_name {
   display: flex;
@@ -52,6 +53,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-style: italic;
 }
 .pokemon_card {
   display: flex;
