@@ -22,6 +22,11 @@ body {
   width: 100vw;
   height: 100vh;
 }
+.box_container {
+  border: solid 40px;
+  border-image: url(".//images/pokemon_bw_ball.png");
+  border-image-repeat: repeat;
+}
 .result_box {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -36,7 +41,7 @@ body {
   border: 0.125rem solid #000;
   border-radius: 3.125rem;
   width: 12rem;
-  height: 3.75rem;
+  height: 4rem;
   position: relative;
   overflow: none;
 }
